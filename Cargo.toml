@@ -1,0 +1,27 @@
+[package]
+name = "psp34_nft"
+version = "1.0.0"
+edition = "2021"
+authors = ["ArtZero <admin@artzero.io>"]
+
+[dependencies]
+ink = { version = "4.3", default-features = false }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2.9", default-features = false, features = ["derive"], optional = true }
+
+[lib]
+name = "psp34_nft"
+path = "lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+]
+
+enumerable = []
+contract = []
+ink-as-dependency = []
