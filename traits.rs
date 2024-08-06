@@ -167,4 +167,7 @@ pub trait Psp34Traits {
     /// This function returns how many NFTs have been locked by its owners
     #[ink(message)]
     fn get_locked_token_count(&self) -> u64;
+
+    #[ink(message)]
+    fn get_owner(&self) -> AccountId;
 }

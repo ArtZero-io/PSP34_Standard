@@ -368,5 +368,10 @@ mod psp34_nft {
         fn get_locked_token_count(&self) -> u64 {
             self.manager_psp34_standard.get_locked_token_count()
         }
+
+        #[ink(message)]
+        fn get_owner(&self) -> AccountId {
+            self.ownable.owner().unwrap()
+        }
     }
 }
